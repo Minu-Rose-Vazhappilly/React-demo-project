@@ -101,7 +101,7 @@ latest version:19
     - Install react-route-dom Library
             -npm i react-router-dom
     -Set up path for component using react-router-dom
-        1.Entire react app must be render inside the 'BrowserRouter'.
+        1.Entire react app must be render inside the 'BrowserRouter'.[In main.jsx]
         2.Place all components needs 
 
     

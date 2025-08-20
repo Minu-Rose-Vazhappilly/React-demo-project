@@ -11,7 +11,7 @@ import Contact from './Contact'
 
 function App() {
    const empName = "Lucas Alex"
-   const userName = "Minu Rose"
+   const userName = "Anu S Vazhappilly"
    const inputElement = useRef();
   const clickFunction = ()=>{
     alert("You clicked Me.")
@@ -39,6 +39,7 @@ function App() {
       </div>
         <Employee parentData={empName} isEmp = {false}/>
         <User parentData1={userName}/>
+       
         
     </>
   )
