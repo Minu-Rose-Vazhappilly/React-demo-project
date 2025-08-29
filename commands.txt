@@ -1,0 +1,31 @@
+to run json file : npx json-server db.json
+
+sweet alert:npm install sweetalert --save
+
+to convert into pdf
+to take screenshots:npm i html2canvas
+to convert into pdf install : npm i jspdf
+
+How to Deploy a site
+--------------------------
+change the json-server ---{version without alpha or beta}----in this version we can't run json file using "npx json-server db.json"
+create  a .gitignore file in server folder 
+create a javascript file named index.js in serverfolder
+type those code in index.js
+run index.js
+
+create a GitHub repository and push all codes of server into GitHub
+
+to deploy render.com is used
+link render.com with GitHub->click new=>click project->select the appropriate GitHub repository from projects and link it 
+change test:"bfjbj" into start:"node index.js"
+go to render render.com -> refresh site-> deploy it
+
+get the new url of backend end from render(click the image ,it will open a new window with server project)
+copy the url and change the baseurl of frontend project as this(change it from services folder->baseUrl.js->Change BASEURL)
+push them in git hub
+
+to deploy front end vercel is used(vercel dynamic deployment,it creates build by their own)
+same as render
+link it with GitHub
+click add new project->link it github->select appropriate GitHub repository and import it -> deploy project
