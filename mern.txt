@@ -103,5 +103,62 @@ latest version:19
     -Set up path for component using react-router-dom
         1.Entire react app must be render inside the 'BrowserRouter'.[In main.jsx]
         2.Place all components needs 
+16.API Handling in React:
+    -  fetch method
+    - Axios Library : Promise based HTTP request handling 
+        install Axios - npm i axios
+        -Axios Instance is used to make api call
+                - Using : axios(requestConfiguration)
+                    -requestConfig : is object with predefined keys (method,url,data,headers...)
+                
+            Axios methods (GET,PUT,POST,DELETE)
+        
+ How data can be shared between components(through props)
+State Lifting 
+    To share data from one component to another by lifting the data to their common parent and parent can share the lifted state/data using props with its children
+Props Drilling 
+To avoid Props Drilling - Redux can be used
+Redux
+-------
+there will be common data store where all components can be accesssed.
 
+JSON SERVER - REST API creation
+--------------------------------
+1.Create a folder for json SERVER.
+2.Create json file to store data
+3.Install json-server : npm i json-server
+4.To run json file(available in localhost:3000) : npx json-server json-file-name
+
+DEPLOYING JSON SERVER Using NODE(refer to commands.txt)
+-----------------------
+1.Install stable version of json-server : npm i json-server@0.17.0
+2.create  a .gitignore file in server folder
+3.Create index.js file
+4.Inside idex.js file
+        - import json-server
+        - create server using Library json-server using create method
+        - import json file
+        - create middleware:using default()
+        - define port number to run the app in localhost
+        - use middleware in server
+        - define routes for client request (api endpoints for server)
+        - run server for client request using listen method.
     
+REDUX : STATE MANAGEMENT TOOL
+-------------------------------
+1.a js library for predictable and maintable global state managemnt and used in react to avoid props drilling.
+2.REDUX consist of 2 libraries
+    - REDUX TOOLKIT:The official ,opinionated,batteries-included toolset for efficient redux developement,npm install @reduxjs/toolkit react-redux
+            - Create common storage : configureStore() and store immutable (objects/array) data in storage
+            - Actions: used to update data from component and they are similar to function, to execute action it should be dispatched from component.Action aoutput automatically return to reducers in redux.,use createAction() or 
+            - Reducers:used to upadte data in storage.
+            -Slice:used to combine both action & reducer,usecreateSlice()
+    -REACT REDUX:Official React Bindings for redux
+            -store property of provider component from react-redux:used to provide redux store
+            -Hooks:
+                -useDispatch(action-name()):hook used to dispatch action from component.
+                -useSelector() : hook used to select data from store.
+
+                imutable state are used to store in datastore.
+                immutable - array,object.
+
