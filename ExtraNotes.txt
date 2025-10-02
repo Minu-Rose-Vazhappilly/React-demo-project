@@ -1,0 +1,65 @@
+What is CLI?
+
+CLI stands for Command-Line Interface.
+
+It is a way to interact with software using text commands typed into a terminal or command prompt.
+
+Unlike a Graphical User Interface (GUI), there are no buttons or visual menus — everything is typed.
+
+Examples:
+
+Terminal on Mac/Linux
+
+Command Prompt or PowerShell on Windows
+
+You type commands like:
+
+cd my-project
+ls
+mkdir newFolder
+
+🔹 What are CLI Tools?
+
+CLI tools are programs or utilities that you run from the command line to perform tasks.
+
+They help developers do things faster without opening GUIs.
+
+Often used for project setup, build, deployment, testing, and automation.
+
+Examples in React/JS ecosystem:
+
+Node.js CLI → node app.js runs JavaScript programs.
+
+npm CLI → npm install react installs packages.
+
+Create React App CLI → npx create-react-app my-app sets up a new React project.
+
+Git CLI → git commit -m "message" manages version control.
+
+Vite CLI → npm create vite@latest my-app quickly scaffolds modern React apps.
+
+
+Commands vs CLI tools
+Aspect	                        Command	                                           CLI Tool
+Definition	    A single instruction you type in terminal.	         A program/utility that runs in the command line and interprets commands.
+Purpose	       Tells the CLI tool what action to perform.	         Executes tasks like scaffolding projects, installing packages, or running scripts.
+Example	       npm install react	                                 npm (Node Package Manager)
+Behavior	   One action at a time (like installing a package)    	 Can understand many commands and options (like npm install, npm start, npm run build)
+
+
+Where do we get CLI tools?
+
+CLI tools are programs, so you need to install them on your computer. There are several ways depending on the tool:
+
+1️⃣ Pre-installed with software
+
+Some CLI tools come bundled when you install certain software:
+
+Git CLI → comes with Git installation (git-scm.com
+)
+
+Node.js CLI (node and npm) → comes when you install Node.js (nodejs.org
+)
+
+Python CLI (python or pip) → comes with Python installation
+
