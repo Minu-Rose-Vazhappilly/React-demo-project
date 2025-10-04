@@ -63,3 +63,180 @@ Node.js CLI (node and npm) → comes when you install Node.js (nodejs.org
 
 Python CLI (python or pip) → comes with Python installation
 
+
+
+JSX (JavaScript XML)
+
+Definition:
+
+JSX is a syntax extension for JavaScript that lets you write HTML-like code inside JavaScript.
+
+React uses JSX to define what the UI should look like.
+
+Key points:
+
+Browsers don’t understand JSX directly → it is transformed into JavaScript using Babel.
+
+You can write JavaScript expressions inside curly braces {}.
+
+Example:
+
+const name = "Minu";
+
+function Greeting() {
+  return <h1>Hello, {name}!</h1>; // JSX
+}
+
+
+<h1>Hello, {name}!</h1> looks like HTML but is JSX.
+
+{name} → JavaScript expression evaluated inside JSX.
+
+Rules:
+
+JSX must have one root element.
+
+Use className instead of class for CSS.
+
+Self-closing tags must end with / (<img />).
+
+2️⃣ Props vs State
+Feature	                    Props	                                                        State
+Definition	Short for “properties”, used to pass data from parent to child component	Used to store data that can change inside a component
+Mutability	Read-only (cannot change inside child)	                                    Mutable (can be updated with setState in class or useState in functional)
+Scope	    Passed from outside	                                                        Local to the component
+Example	<Child name="Minu" /> → child reads props	                                    const [count, setCount] = useState(0)
+
+Example in React (Functional):
+
+function Child({ name }) {
+  return <h2>Hello, {name}</h2>; // using prop
+}
+
+function Parent() {
+  const [count, setCount] = React.useState(0); // state
+  return (
+    <>
+      <Child name="Minu" />
+      <button onClick={() => setCount(count + 1)}>Count: {count}</button>
+    </>
+  );
+}
+
+
+Prop example: Passing "Minu" to child.
+
+State example: Counter inside parent changes on button click.
+
+3️⃣ Conditional Rendering
+
+Definition:
+
+Render different UI elements based on conditions (like if-else).
+
+Ways to do it:
+
+Using if-else inside component:
+
+function Greeting({ isLoggedIn }) {
+  if (isLoggedIn) {
+    return <h1>Welcome back!</h1>;
+  } else {
+    return <h1>Please login</h1>;
+  }
+}
+
+
+Using ternary operator inside JSX:
+
+<h1>{isLoggedIn ? "Welcome back!" : "Please login"}</h1>
+
+
+Using logical AND (&&) operator:
+
+{isLoggedIn && <button>Logout</button>}
+
+
+Key point:
+
+Conditional rendering lets React dynamically change UI without reloading the page.
+
+4️⃣ Component Composition
+
+Definition:
+
+Composing components means combining smaller components into larger ones.
+
+Helps reuse code and organize UI.
+
+Example:
+
+function Header() {
+  return <h1>My App</h1>;
+}
+
+function Footer() {
+  return <footer>© 2025</footer>;
+}
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <p>Welcome to the app!</p>
+      <Footer />
+    </div>
+  );
+}
+
+
+App component composes Header, Footer, and a paragraph.
+
+This is cleaner and reusable.
+
+Key point:
+
+Composition is like LEGO blocks → small components can be combined to build complex UI.
+
+
+2) Lists & Keys
+What it is
+
+Rendering lists means mapping an array to JSX elements. Keys are special ids React uses to identify which items changed, were added, or removed — enabling efficient updates.
+
+Why keys matter
+
+React uses the key to match elements between renders. A stable, unique key helps React preserve component state and apply minimal DOM changes.
+
+Imagine a list:
+Index:   0      1      2
+Data:   [10,   20,    30]
+Key:    0      1      2   (using index as key ❌)
+
+
+Now React associates each index with the UI element.
+
+0 → 10
+
+1 → 20
+
+2 → 30
+
+🔹 Now insert a new number at the start:
+Data:   [99,   10,   20,   30]
+Index:   0     1     2     3
+Key:     0     1     2     3   (indexes shift ❌)
+
+
+Look what happens:
+
+The old “10” was at index 0, but now “99” is at index 0.
+
+React sees the same key = 0 and thinks: “Oh, same element, I’ll just update its value.”
+
+So the UI confuses 99 with 10, reuses DOM nodes wrongly.
+
+
+
+
+
