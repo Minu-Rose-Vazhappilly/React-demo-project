@@ -293,3 +293,12 @@ This process of syncing Virtual DOM with the real DOM = Reconciliation.
 Diffing = spotting the differences.
 
 Reconciliation = fixing the real DOM based on differences.
+
+
+
+MONGODB -DATABASE
+---------------------
+1.Database : database is a oraganised collection of data to be stored permanently.
+2.MONGODB is document databse.
+3.it stores data in a type of JSON format called BSON 
+4.Values may include numbers,strings,booleans,arrays or even nested documents.
